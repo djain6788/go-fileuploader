@@ -38,9 +38,9 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 	recordId := r.FormValue(configuration1.recordIdFromRequest)
 
 	if _, err := os.Stat(accountId); os.IsNotExist(err) {
-		os.Mkdir(accountId+"/"+recordId, 0700)
+		os.MkdirAll(accountId+"/"+recordId, 0700)
 	}
-	_ = os.Mkdir(accountId+"/"+recordId, 0700)
+	_ = os.MkdirAll(accountId+"/"+recordId, 0700)
 
 	fhs := r.MultipartForm.File[configuration1.filesFromRequest]
 	for _, fh := range fhs {
