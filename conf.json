@@ -1,0 +1,11 @@
+{ "configuration": {
+      "dbDriver": "mysql",
+      "dbUser": "root",
+      "dbPass": "password",
+      "dbName": "FileStorage",
+      "fileSize": "3",
+      "filesFromRequest": "myfiles",
+      "accountIdFromRequest": "accountId",
+      "recordIdFromRequest": "recordId"
+     }
+}
